@@ -1,48 +1,80 @@
 import React, { Component } from "react";
-import { login } from "./UserFunctions";
+import { register } from "./UserFunctions";
 
-class Login extends Component {
+class Register extends Component {
 	constructor() {
 		super();
 		this.state = {
+			first_name: "",
+			last_name: "",
 			email: "",
 			password: "",
 			errors: {}
 		};
+
 		this.onChange = this.onChange.bind(this);
-		this.onSubmit = this.onSubmit.bind(this);
+		this.onChange = this.onSubmit.bind(this);
 	}
+
 	onChange(event) {
 		this.setState({ [event.target.name]: event.target.value });
 	}
-	onSubmit(event) {
-		event.preventdefault();
 
-		const user = {
+	onSubmit(event) {
+		event.preventDefault();
+
+		const newUser = {
+			first_name: this.state.first_name,
+			last_name: this.state.last_name,
 			email: this.state.email,
 			password: this.state.password
 		};
 
-		login(user).then((res) => {
-			if (res) {
-				this.props.history.push("/profiles");
-			}
+		register(newUser).then((res) => {
+			this.props.history.push("/login");
 		});
 	}
 
 	render() {
 		return (
-			<div ClassName="container" id="signinform">
+			<div ClassName="container" id="signupform">
 				<div ClassName="section">
 					<div ClassName="row">
 						<form ClassName="col s8">
-							<h2>Sign In</h2>
+							<h2>Sign Up</h2>
 							<div ClassName="row">
+								<div ClassName="input-field col s8">
+									<input
+										id="firstname"
+										type="text"
+										ClassName="validate"
+										name="first_name"
+										value={this.state.first_name}
+										onChange={this.onChange}
+									/>
+									<label for="name">
+										<i ClassName="fas fa-user" /> First Name
+									</label>
+								</div>
+								<div ClassName="input-field col s8">
+									<input
+										id="lastname"
+										type="text"
+										ClassName="validate"
+										name="last_name"
+										value={this.state.last_name}
+										onChange={this.onChange}
+									/>
+									<label for="name">
+										<i ClassName="fas fa-user" /> Last Name
+									</label>
+								</div>
 								<div ClassName="input-field col s8">
 									<input
 										id="email"
 										type="email"
 										ClassName="validate"
+										name="email"
 										value={this.state.email}
 										onChange={this.onChange}
 									/>
@@ -57,6 +89,7 @@ class Login extends Component {
 										id="password"
 										type="password"
 										ClassName="validate"
+										name="password"
 										value={this.state.password}
 										onChange={this.onChange}
 									/>
@@ -67,11 +100,11 @@ class Login extends Component {
 							</div>
 							<button
 								ClassName="btn waves-effect waves-light"
-								id="signinbutton"
+								id="signupbutton"
 								type="submit"
 								name="action"
 							>
-								Sign In <i ClassName="fas fa-sign-in-alt" />
+								Sign Up <i ClassName="fas fa-user-plus" />
 							</button>
 						</form>
 						<div ClassName="card-image">
@@ -84,4 +117,4 @@ class Login extends Component {
 	}
 }
 
-export default Login;
+export default Register;
