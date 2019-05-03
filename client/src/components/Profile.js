@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import jwt_decode from "jwt-decode";
 
-class Portfolio extends Component {
+class Profile extends Component {
 	constructor() {
 		super();
 		this.state = {

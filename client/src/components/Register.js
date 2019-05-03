@@ -5,15 +5,15 @@ class Register extends Component {
 	constructor() {
 		super();
 		this.state = {
-			first_name: "",
-			last_name: "",
+		
 			email: "",
 			password: "",
+			screenname: "",
 			errors: {}
 		};
 
 		this.onChange = this.onChange.bind(this);
-		this.onChange = this.onSubmit.bind(this);
+		// this.onChange = this.onSubmit.bind(this);
 	}
 
 	onChange(event) {
@@ -24,10 +24,10 @@ class Register extends Component {
 		event.preventDefault();
 
 		const newUser = {
-			first_name: this.state.first_name,
-			last_name: this.state.last_name,
+			
 			email: this.state.email,
-			password: this.state.password
+			password: this.state.password,
+			screenname: this.state.screenname
 		};
 
 		register(newUser).then((res) => {
@@ -37,78 +37,69 @@ class Register extends Component {
 
 	render() {
 		return (
-			<div ClassName="container" id="signupform">
-				<div ClassName="section">
-					<div ClassName="row">
-						<form ClassName="col s8">
+			<div className="container" id="signupform">
+				<div className="section">
+					<div className="row">
+						<form className="col s8">
 							<h2>Sign Up</h2>
-							<div ClassName="row">
-								<div ClassName="input-field col s8">
-									<input
-										id="firstname"
-										type="text"
-										ClassName="validate"
-										name="first_name"
-										value={this.state.first_name}
-										onChange={this.onChange}
-									/>
-									<label for="name">
-										<i ClassName="fas fa-user" /> First Name
-									</label>
-								</div>
-								<div ClassName="input-field col s8">
-									<input
-										id="lastname"
-										type="text"
-										ClassName="validate"
-										name="last_name"
-										value={this.state.last_name}
-										onChange={this.onChange}
-									/>
-									<label for="name">
-										<i ClassName="fas fa-user" /> Last Name
-									</label>
-								</div>
-								<div ClassName="input-field col s8">
+							<div className="row">
+								
+								<div className="input-field col s8">
 									<input
 										id="email"
 										type="email"
-										ClassName="validate"
+										className="validate"
 										name="email"
 										value={this.state.email}
 										onChange={this.onChange}
 									/>
-									<label for="email">
-										<i ClassName="fas fa-envelope" /> Email
+									<label htmlFor="email">
+										<i className="fas fa-envelope" /> Email
 									</label>
 								</div>
 							</div>
-							<div ClassName="row">
-								<div ClassName="input-field col s8">
+							<div className="row">
+								<div className="input-field col s8">
 									<input
 										id="password"
 										type="password"
-										ClassName="validate"
+										className="validate"
 										name="password"
 										value={this.state.password}
 										onChange={this.onChange}
 									/>
-									<label for="password">
-										<i ClassName="fas fa-key" /> Password
+									<label htmlFor="password">
+										<i className="fas fa-key" /> Password
 									</label>
 								</div>
 							</div>
+							<div className="row">
+							<div className="input-field col s8">
+									<input
+										id="screenname"
+										type="text"
+										className="validate"
+										name="screenname"
+										value={this.state.screenname}
+										onChange={this.onChange}
+									/>
+									<label htmlFor="name">
+										<i className="fas fa-user" /> Screen Name
+									</label>
+								</div>
+								</div>
 							<button
-								ClassName="btn waves-effect waves-light"
+								className="btn waves-effect waves-light"
 								id="signupbutton"
 								type="submit"
 								name="action"
+								onClick={this.onSubmit}
 							>
-								Sign Up <i ClassName="fas fa-user-plus" />
+								Sign Up <i className="fas fa-user-plus" />
 							</button>
 						</form>
-						<div ClassName="card-image">
-							<img src="teambuilderlogo2.png" />
+						<div className="card-image">
+							{/* <img src="teambuilderlogo2.png" /> */}
 						</div>
 					</div>
 				</div>

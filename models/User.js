@@ -4,7 +4,7 @@ const db = require("../database/db")
 module.exports = db.sequelize.define(
   "user", {
     email: {
-      type: DataTypes.STRING,
+      type: Sequelize.STRING,
       allowNull: false,
       unique: true,
       validate: {
@@ -13,11 +13,11 @@ module.exports = db.sequelize.define(
     },
     // The password cannot be null
     password: {
-      type: DataTypes.STRING,
+      type: Sequelize.STRING,
       allowNull: false
     },
     screenname: {
-      type: DataTypes.STRING,
+      type: Sequelize.STRING,
       allowNull: false,
       unique: true
     }

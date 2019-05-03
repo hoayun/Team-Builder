@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
+import { NavItem, Navbar } from 'react-materialize';
 
 class Landing extends Component {
 	logOut(event) {
@@ -11,7 +12,7 @@ class Landing extends Component {
 	render() {
 		const loginRegLink = (
 			<ul className="nav-wrapper">
-				<li className="brand-logo">Team Builder LFG</li>
+				{/* <li className="brand-logo">Team Builder LFG</li> */}
 				<li className="NavItem">
 					<Link to="/login" className="nav-link">
 						Login
@@ -41,20 +42,23 @@ class Landing extends Component {
 		);
 
 		return (
-			<Navbar brand={<a />} alignLinks="right">
-				<div className="nav-wrapper">
-					<Button node="a">Login</Button>
-				</div>
+			
+				
+			<Navbar brand={<a />} alignLinks="right" >
+				
+			
+			
 
-				<div className="right hide-on-med-and-down" id="navbars">
-					<ul className="NavItem">
+					 <ul className="NavItem">
 						<Link to="/" className="nav-link">
 							Home
 						</Link>
 					</ul>
-					{localStorage.usertoken ? userLink : loginRegLink}
-				</div>
+					{localStorage.usertoken ? userLink : loginRegLink} 
+				
 			</Navbar>
+				
+		
 		);
 	}
 }

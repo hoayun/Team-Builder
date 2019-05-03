@@ -14,17 +14,17 @@ class Landing extends Component {
 								</p>
 							</div>
 							<div className="center-align card-action">
-								<a href="signinindex.html" class="waves-effect waves-light btn-large" id="signinbutton">
-									<i class="fas fa-sign-in-alt" /> Sign In
+								<a href="signinindex.html" className="waves-effect waves-light btn-large" id="signinbutton">
+									<i className="fas fa-sign-in-alt" /> Sign In
 								</a>
-								<a href="signupindex.html" class="waves-effect waves-light btn-large" id="signupbutton">
-									Sign Up <i class="fas fa-user-plus" />
+								<a href="signupindex.html" className="waves-effect waves-light btn-large" id="signupbutton">
+									Sign Up <i className="fas fa-user-plus" />
 								</a>
 							</div>
 						</div>
-						<div className="card-image">
+						{/* <div className="card-image">
 							<img src="teambuilderlogo2.png" />
-						</div>
+						</div> */}
 					</div>
 				</div>
 			</div>

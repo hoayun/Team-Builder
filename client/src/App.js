@@ -1,7 +1,11 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
-import logo from "./logo.svg";
+import Navbar from "./components/Navbar"
+import Landing from "./components/Landing"
+import Register from "./components/Register"
+import Login from "./components/login"
+import Profile from "./components/Profile"
 import "./App.css";
 
 class App extends Component {
