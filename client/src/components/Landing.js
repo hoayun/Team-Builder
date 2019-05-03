@@ -14,11 +14,11 @@ class Landing extends Component {
 								</p>
 							</div>
 							<div className="center-align card-action">
-								<a href="signinindex.html" className="waves-effect waves-light btn-large" id="signinbutton">
-									<i className="fas fa-sign-in-alt" /> Sign In
+								<a href="/Login" className="waves-effect waves-light btn-large" id="signinbutton">
+									<i className="fas fa-sign-in-alt" /> Login
 								</a>
-								<a href="signupindex.html" className="waves-effect waves-light btn-large" id="signupbutton">
-									Sign Up <i className="fas fa-user-plus" />
+								<a href="/Register" className="waves-effect waves-light btn-large" id="signupbutton">
+									Register <i className="fas fa-user-plus" />
 								</a>
 							</div>
 						</div>

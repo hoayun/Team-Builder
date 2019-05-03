@@ -32,51 +32,51 @@ class Login extends Component {
 
 	render() {
 		return (
-			<div ClassName="container" id="signinform">
-				<div ClassName="section">
-					<div ClassName="row">
-						<form ClassName="col s8">
-							<h2>Sign In</h2>
-							<div ClassName="row">
-								<div ClassName="input-field col s8">
+			<div className="container" id="signinform">
+				<div className="section">
+					<div className="row">
+						<form className="col s8">
+							<h2>Login</h2>
+							<div className="row">
+								<div className="input-field col s8">
 									<input
 										id="email"
 										type="email"
-										ClassName="validate"
+										className="validate"
 										value={this.state.email}
 										onChange={this.onChange}
 									/>
-									<label for="email">
-										<i ClassName="fas fa-envelope" /> Email
+									<label htmlFor="email">
+										<i className="fas fa-envelope" /> Email
 									</label>
 								</div>
 							</div>
-							<div ClassName="row">
-								<div ClassName="input-field col s8">
+							<div className="row">
+								<div className="input-field col s8">
 									<input
 										id="password"
 										type="password"
-										ClassName="validate"
+										className="validate"
 										value={this.state.password}
 										onChange={this.onChange}
 									/>
-									<label for="password">
-										<i ClassName="fas fa-key" /> Password
+									<label htmlFor="password">
+										<i className="fas fa-key" /> Password
 									</label>
 								</div>
 							</div>
 							<button
-								ClassName="btn waves-effect waves-light"
+								className="btn waves-effect waves-light"
 								id="signinbutton"
 								type="submit"
 								name="action"
 							>
-								Sign In <i ClassName="fas fa-sign-in-alt" />
+								Login <i className="fas fa-sign-in-alt" />
 							</button>
 						</form>
-						<div ClassName="card-image">
+						{/* <div className="card-image">
 							<img src="teambuilderlogo2.png" />
-						</div>
+						</div> */}
 					</div>
 				</div>
 			</div>
