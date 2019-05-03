@@ -5,7 +5,6 @@ class Register extends Component {
 	constructor() {
 		super();
 		this.state = {
-		
 			email: "",
 			password: "",
 			screenname: "",
@@ -13,7 +12,7 @@ class Register extends Component {
 		};
 
 		this.onChange = this.onChange.bind(this);
-		// this.onChange = this.onSubmit.bind(this);
+		this.onSubmit = this.onSubmit.bind(this);
 	}
 
 	onChange(event) {
@@ -24,7 +23,6 @@ class Register extends Component {
 		event.preventDefault();
 
 		const newUser = {
-			
 			email: this.state.email,
 			password: this.state.password,
 			screenname: this.state.screenname
@@ -41,9 +39,8 @@ class Register extends Component {
 				<div className="section">
 					<div className="row">
 						<form className="col s8">
-							<h2>Sign Up</h2>
+							<h2>Register</h2>
 							<div className="row">
-								
 								<div className="input-field col s8">
 									<input
 										id="email"
@@ -74,7 +71,7 @@ class Register extends Component {
 								</div>
 							</div>
 							<div className="row">
-							<div className="input-field col s8">
+								<div className="input-field col s8">
 									<input
 										id="screenname"
 										type="text"
@@ -87,7 +84,7 @@ class Register extends Component {
 										<i className="fas fa-user" /> Screen Name
 									</label>
 								</div>
-								</div>
+							</div>
 							<button
 								className="btn waves-effect waves-light"
 								id="signupbutton"
@@ -95,12 +92,10 @@ class Register extends Component {
 								name="action"
 								onClick={this.onSubmit}
 							>
-								Sign Up <i className="fas fa-user-plus" />
+								Register <i className="fas fa-user-plus" />
 							</button>
 						</form>
-						<div className="card-image">
-							{/* <img src="teambuilderlogo2.png" /> */}
-						</div>
+						<div className="card-image">{/* <img src="teambuilderlogo2.png" /> */}</div>
 					</div>
 				</div>
 			</div>

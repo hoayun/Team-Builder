@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
-import { NavItem, Navbar } from 'react-materialize';
+import { Navbar } from "react-materialize";
 
 class Landing extends Component {
 	logOut(event) {
@@ -34,7 +34,7 @@ class Landing extends Component {
 					</Link>
 				</li>
 				<li className="NavItem">
-					<a href="" onClick={this.logOut.bind(this)} className="nav-link">
+					<a href="/" onClick={this.logOut.bind(this)} className="nav-link">
 						Logout
 					</a>
 				</li>
@@ -42,23 +42,14 @@ class Landing extends Component {
 		);
 
 		return (
-			
-				
-			<Navbar brand={<a />} alignLinks="right" >
-				
-			
-			
-
-					 <ul className="NavItem">
-						<Link to="/" className="nav-link">
-							Home
-						</Link>
-					</ul>
-					{localStorage.usertoken ? userLink : loginRegLink} 
-				
+			<Navbar alignLinks="right">
+				<ul className="NavItem">
+					<Link to="/" className="nav-link">
+						Home
+					</Link>
+				</ul>
+				{localStorage.usertoken ? userLink : loginRegLink}
 			</Navbar>
-				
-		
 		);
 	}
 }
