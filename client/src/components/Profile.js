@@ -10,6 +10,7 @@ class Profile extends Component {
 			password: "",
 			screenname: "",
 
+
 		};
 	}
 
@@ -23,6 +24,7 @@ class Profile extends Component {
 	 		screenname: decoded.screenname
 	 	});
 	 }
+
 
 	render() {
 		return (
@@ -39,12 +41,14 @@ class Profile extends Component {
 
 					<tbody>
 						<tr>
+
 							<td>{this.state.email}</td>
 						</tr>
 						<tr>
 							<td>{this.state.password} </td>
 						</tr>
 						<tr>
+
 							<td>{this.state.screenname} </td>
 						</tr>
 					</tbody>
