@@ -5,9 +5,9 @@ class Profile extends Component {
 	constructor() {
 		super();
 		this.state = {
-			first_name: "",
-			last_name: "",
 			email: "",
+			password: "",
+			screenname: "",
 			errors: {}
 		};
 	}
@@ -16,9 +16,9 @@ class Profile extends Component {
 		const token = localStorage.usertoken;
 		const decoded = jwt_decode(token);
 		this.setState({
-			first_name: decoded.first_name,
-			last_name: decoded.last_name,
-			email: decoded.email
+			email: decoded.email,
+			password: decoded.password,
+			screenname: decoded.screenname
 		});
 	}
 
@@ -34,16 +34,16 @@ class Profile extends Component {
 
 					<tbody>
 						<tr>
-							<td>First Name</td>
-							<td>{this.state.first_name}</td>
-						</tr>
-						<tr>
-							<td>Last Name</td>
-							<td>{this.state.last_name} </td>
-						</tr>
-						<tr>
 							<td>Email</td>
-							<td>{this.state.email} </td>
+							<td>{this.state.email}</td>
+						</tr>
+						<tr>
+							<td>Password</td>
+							<td>{this.state.password} </td>
+						</tr>
+						<tr>
+							<td>screenname</td>
+							<td>{this.state.screenname} </td>
 						</tr>
 					</tbody>
 				</table>
