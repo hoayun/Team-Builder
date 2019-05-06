@@ -1,0 +1,13 @@
+#loginform {
+	margin-top: 100px;
+	margin-bottom: 100px;
+	background-color: rgba(60, 59, 65, 0.8);
+	padding-left: 40px;
+	color: rgb(197, 127, 30);
+}
+
+#loginbutton {
+	background-color: rgb(1, 195, 253);
+	color: rgb(88, 85, 85);
+	font-size: 18px;
+}

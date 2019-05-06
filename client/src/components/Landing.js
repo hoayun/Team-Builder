@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./Landing.css";
 
 class Landing extends Component {
 	render() {
@@ -14,10 +15,10 @@ class Landing extends Component {
 								</p>
 							</div>
 							<div className="center-align card-action">
-								<a href="/Login" className="waves-effect waves-light btn-large" id="signinbutton">
+								<a href="/Login" className="waves-effect waves-light btn-large" id="loginbutton">
 									<i className="fas fa-sign-in-alt" /> Login
 								</a>
-								<a href="/Register" className="waves-effect waves-light btn-large" id="signupbutton">
+								<a href="/Register" className="waves-effect waves-light btn-large" id="registerbutton">
 									Register <i className="fas fa-user-plus" />
 								</a>
 							</div>
