@@ -11,6 +11,7 @@ export const register = (newUser) => {
 		.then((response) => {
 			console.log("Registered");
 			console.log(response)
+
 		});
 };
 
@@ -18,6 +19,7 @@ export const login = (user) => {
 	return axios
 		.post("users/login", {
 			email: user.email,
+			
 			password: user.password
 		})
 		.then((response) => {
