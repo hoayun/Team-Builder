@@ -1,5 +1,25 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+	font-family: 'Cardo', serif;
+}
+
+.bg {
+	background-image: url(https://images.pexels.com/photos/2115257/pexels-photo-2115257.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	overflow: auto;
+	background-attachment: fixed;
+}
+
+#footertext {
+	color: rgb(197, 127, 30);
+	font-size: 18px;
+}
+
+#footer {
+	background-color: rgba(60, 59, 65, 0.8) !important;
+	padding-top: 0px;
 }

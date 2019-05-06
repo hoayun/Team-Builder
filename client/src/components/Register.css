@@ -1,0 +1,13 @@
+#registerform {
+	margin-top: 55px;
+	margin-bottom: 50px;
+	background-color: rgba(60, 59, 65, 0.8);
+	padding-left: 40px;
+	color: rgb(197, 127, 30);
+}
+
+#registerbutton {
+	background-color: rgb(59, 4, 242);
+	color: rgb(207, 207, 207);
+	font-size: 17px;
+}

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
-import { Navbar } from "react-materialize";
+import { Navbar, NavItem } from "react-materialize";
+import "./Navbar.css";
 
 class Landing extends Component {
 	logOut(event) {
@@ -12,7 +13,9 @@ class Landing extends Component {
 	render() {
 		const loginRegLink = (
 			<ul className="nav-wrapper">
-				{/* <li className="brand-logo">Team Builder LFG</li> */}
+				<h4 className="brand-logo" id="navheader">
+					Team Builder LFG
+				</h4>
 				<li className="NavItem">
 					<Link to="/login" className="nav-link">
 						Login
@@ -42,13 +45,30 @@ class Landing extends Component {
 		);
 
 		return (
-			<Navbar alignLinks="right">
-				<ul className="NavItem">
-					<Link to="/" className="nav-link">
-						Home
-					</Link>
-				</ul>
-				{localStorage.usertoken ? userLink : loginRegLink}
+			// <Navbar centerLogo alignLinks="right">
+			// 	<ul className="NavItem">
+			// 		<Link to="/" className="nav-link">
+			// 			Team Builder LFG
+			// 		</Link>
+			// 	</ul>
+			// 	{localStorage.usertoken ? userLink : loginRegLink}
+			// </Navbar>
+
+			<Navbar
+				brand={
+					<a href="/" className="brand-logo center">
+						Team Builder LFG
+					</a>
+				}
+				centerLogo
+				alignLinks="right"
+			>
+				<NavItem href="/Login" id="loginlink">
+					<i className="fas fa-sign-in-alt" /> Login
+				</NavItem>
+				<NavItem href="/Register" id="registerlink">
+					Register <i className="fas fa-user-plus" />
+				</NavItem>
 			</Navbar>
 		);
 	}

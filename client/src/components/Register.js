@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { register } from "./UserFunctions";
+import "./Register.css";
 
 class Register extends Component {
 	constructor() {
@@ -35,7 +36,7 @@ class Register extends Component {
 
 	render() {
 		return (
-			<div className="container" id="signupform">
+			<div className="container" id="registerform">
 				<div className="section">
 					<div className="row">
 						<form className="col s8">
@@ -87,7 +88,7 @@ class Register extends Component {
 							</div>
 							<button
 								className="btn waves-effect waves-light"
-								id="signupbutton"
+								id="registerbutton"
 								type="submit"
 								name="action"
 								onClick={this.onSubmit}

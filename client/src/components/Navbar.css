@@ -1,0 +1,21 @@
+.brand-logo {
+	color: rgb(197, 127, 30) !important;
+	font-family: 'Orbitron', sans-serif;
+}
+
+nav {
+	background-color: rgba(60, 59, 65, 0.8) !important;
+	padding-top: 0px;
+}
+
+#loginlink {
+	font-size: 18px;
+	color: rgb(1, 195, 253);
+	margin-right: 5px;
+}
+
+#registerlink {
+	font-size: 18px;
+	color: rgb(59, 4, 242);
+	margin-left: 5px;
+}

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { login } from "./UserFunctions";
+import "./Login.css";
 
 class Login extends Component {
 	constructor() {
@@ -32,7 +33,7 @@ class Login extends Component {
 
 	render() {
 		return (
-			<div className="container" id="signinform">
+			<div className="container" id="loginform">
 				<div className="section">
 					<div className="row">
 						<form className="col s8">
@@ -67,7 +68,7 @@ class Login extends Component {
 							</div>
 							<button
 								className="btn waves-effect waves-light"
-								id="signinbutton"
+								id="loginbutton"
 								type="submit"
 								name="action"
 							>
