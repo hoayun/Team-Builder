@@ -17,7 +17,7 @@ class Login extends Component {
 		this.setState({ [event.target.name]: event.target.value });
 	}
 	onSubmit(event) {
-		event.preventdefault();
+		event.preventDefault();
 
 		const user = {
 			email: this.state.email,
@@ -26,7 +26,7 @@ class Login extends Component {
 
 		login(user).then((res) => {
 			if (res) {
-				this.props.history.push("/profiles");
+				this.props.history.push("/profile");
 			}
 		});
 	}
@@ -44,6 +44,7 @@ class Login extends Component {
 										id="email"
 										type="email"
 										className="validate"
+										name="email"
 										value={this.state.email}
 										onChange={this.onChange}
 									/>
@@ -58,6 +59,7 @@ class Login extends Component {
 										id="password"
 										type="password"
 										className="validate"
+										name="password"
 										value={this.state.password}
 										onChange={this.onChange}
 									/>
@@ -71,6 +73,7 @@ class Login extends Component {
 								id="loginbutton"
 								type="submit"
 								name="action"
+								onClick={this.onSubmit}
 							>
 								Login <i className="fas fa-sign-in-alt" />
 							</button>
