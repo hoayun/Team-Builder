@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import jwt_decode from "jwt-decode";
+import { Table } from "react-materialize";
 
 class Profile extends Component {
 	constructor() {
@@ -8,45 +9,50 @@ class Profile extends Component {
 			email: "",
 			password: "",
 			screenname: "",
-			errors: {}
+
+
 		};
 	}
 
-	componentDidMount() {
-		const token = localStorage.usertoken;
-		const decoded = jwt_decode(token);
-		this.setState({
+	 componentDidMount() {
+		const token = localStorage.getItem("usertoken");
+		console.log(token);
+	 	const decoded = jwt_decode(token);
+	 	this.setState({
 			email: decoded.email,
-			password: decoded.password,
-			screenname: decoded.screenname
-		});
-	}
+	 		password: decoded.password,
+	 		screenname: decoded.screenname
+	 	});
+	 }
+
 
 	render() {
 		return (
 			<div className="container">
-				<table className="bordered">
+				<Table className="bordered" id="profiletable">
+					{/* <h4>Profile</h4> */}
 					<thead>
 						<tr>
-							<th>Profile</th>
+							<th data-field="email">Email</th>
+							<th data-field="password">Password</th>
+							<th data-field="screenname">Screenname</th>
 						</tr>
 					</thead>
 
 					<tbody>
 						<tr>
-							<td>Email</td>
+
 							<td>{this.state.email}</td>
 						</tr>
 						<tr>
-							<td>Password</td>
 							<td>{this.state.password} </td>
 						</tr>
 						<tr>
-							<td>screenname</td>
+
 							<td>{this.state.screenname} </td>
 						</tr>
 					</tbody>
-				</table>
+				</Table>
 			</div>
 		);
 	}
