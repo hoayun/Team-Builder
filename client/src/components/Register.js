@@ -8,8 +8,8 @@ class Register extends Component {
 		this.state = {
 			email: "",
 			password: "",
-			screenname: "",
-			errors: {}
+			screenname: ""
+		
 		};
 
 		this.onChange = this.onChange.bind(this);
