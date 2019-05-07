@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import jwt_decode from "jwt-decode";
 import { Table } from "react-materialize";
+import "./Profile.css"
 
 class Profile extends Component {
 	constructor() {
