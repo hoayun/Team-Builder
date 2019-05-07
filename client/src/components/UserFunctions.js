@@ -31,3 +31,21 @@ export const login = (user) => {
 			console.log(err);
 		});
 };
+
+export const registerTeam = (newTeam) => {
+	return axios
+		.post("/create", {
+			
+			memo: newTeam.memo,
+			name: newTeam.name,
+			game: newTeam.game,
+			type: newTeam.type,
+			player1: newTeam.player
+		
+		})
+		.then((response) => {
+			console.log("Registered");
+			console.log(response)
+
+		});
+};
