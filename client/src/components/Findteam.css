@@ -1,0 +1,17 @@
+#selectgame {
+	margin-top: 150px;
+	margin-bottom: 150px;
+	background-color: rgba(75, 75, 75, 0.8);
+	color: rgb(216, 216, 216);
+	font-size: 20px;
+	padding: 20px;
+}
+
+h3 {
+	color: rgb(197, 127, 30);
+}
+
+#submitbutton {
+	background-color: rgb(15, 161, 228);
+	margin-top: 20px;
+}

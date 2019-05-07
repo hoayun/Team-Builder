@@ -6,6 +6,9 @@ import Landing from "./components/Landing";
 import Register from "./components/Register";
 import Login from "./components/Login";
 import Profile from "./components/Profile";
+import Game from "./components/Game";
+import Createteam from "./components/Createteam";
+import Findteam from "./components/Findteam";
 import "./App.css";
 
 class App extends Component {
@@ -18,7 +21,10 @@ class App extends Component {
 					<div className="container">
 						<Route exact path="/register" component={Register} />
 						<Route exact path="/login" component={Login} />
-						<Route exact path="/profiles" component={Profile} />
+						<Route exact path="/profile" component={Profile} />
+						<Route exact path="/game" component={Game} />
+						<Route exact path="/createteam" component={Createteam} />
+						<Route exact path="/findteam" component={Findteam} />
 					</div>
 				</div>
 			</Router>

@@ -1,0 +1,26 @@
+#findteambutton {
+	background-color: rgb(241, 255, 44);
+	color: rgb(8, 8, 8);
+	font-size: 18px;
+	margin-right: 40px;
+}
+
+#maketeambutton {
+	background-color: rgb(242, 4, 222);
+	color: rgb(5, 5, 5);
+	font-size: 18px;
+	margin-left: 40px;
+}
+
+.card.horizontal {
+	margin-top: 150px;
+	margin-bottom: 160px;
+	background-color: rgba(60, 59, 65, 0.8);
+	color: white;
+	font-size: 20px;
+}
+
+h1 {
+	color: rgb(197, 127, 30);
+	font-family: 'Orbitron', sans-serif;
+}
