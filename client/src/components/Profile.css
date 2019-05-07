@@ -1,7 +1,12 @@
 #profiletable {
-	margin-top: 150px;
-	margin-bottom: 150px;
+
 	background-color: rgba(60, 59, 65, 0.8);
-	padding-left: 40px;
+	padding: 15px;
+	margin-top: 185px;
+	margin-bottom: 190px;
 	color: rgb(197, 127, 30);
+	font-size: 17px;
+	margin-left: auto;
+	margin-right: auto;
 }
+

@@ -11,3 +11,8 @@
 	color: rgb(88, 85, 85);
 	font-size: 18px;
 }
+
+input[type=email]:not(.browser-default):focus:not([readonly]) + label,
+input[type=email]:not(.browser-default).validate + label {
+	color: grey !important;
+}
