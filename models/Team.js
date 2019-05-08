@@ -6,9 +6,9 @@ module.exports = db.sequelize.define(
     memo: {
       type: Sequelize.STRING,
       allowNull: false
-      
+
     },
-    
+
     game: {
       type: Sequelize.STRING,
       allowNull: false
@@ -18,23 +18,23 @@ module.exports = db.sequelize.define(
       allowNull: false,
       unique: true
     },
-    type:{
-        type: Sequelize.STRING,
-        allowNull: false
-       },
-       player1:{
-        type: Sequelize.STRING,
-        allowNull: false
-       },
-       player2:{
-        type: Sequelize.STRING,
-        allowNull: true
-      
-       },
-       player3:{
-        type: Sequelize.STRING,
-        allowNull: true
-       }
-     
+    type: {
+      type: Sequelize.STRING,
+      allowNull: false
+    },
+    player1: {
+      type: Sequelize.STRING,
+      allowNull: false
+    },
+    player2: {
+      type: Sequelize.STRING,
+      allowNull: true
+
+    },
+    player3: {
+      type: Sequelize.STRING,
+      allowNull: true
+    }
+
 
   })
