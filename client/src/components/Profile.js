@@ -9,7 +9,6 @@ class Profile extends Component {
 		super();
 		this.state = {
 			email: "",
-			password: "",
 			screenname: ""
 		};
 	}
@@ -20,7 +19,6 @@ class Profile extends Component {
 		const decoded = jwt_decode(token);
 		this.setState({
 			email: decoded.email,
-			password: decoded.password,
 			screenname: decoded.screenname
 		});
 	}
@@ -28,26 +26,23 @@ class Profile extends Component {
 	render() {
 		return (
 			<div id="profiletable">
-				<h3>Profile</h3>
+				<h3>{this.state.screenname} </h3>
 				<Table className="bordered">
 					<thead>
 						<tr>
 							<th data-field="email">Email</th>
-							<th data-field="password">Password</th>
-							<th data-field="screenname">Screenname</th>
 						</tr>
 					</thead>
 
 					<tbody>
 						<tr>
 							<td>{this.state.email}</td>
-
-							<td>{this.state.password} </td>
-
-							<td>{this.state.screenname} </td>
 						</tr>
 					</tbody>
 				</Table>
+				<a href="/Game" className="waves-effect waves-dark btn" id="gamesbutton">
+					<i class="fas fa-users" /> Go to Find/Create Team
+				</a>
 			</div>
 		);
 	}

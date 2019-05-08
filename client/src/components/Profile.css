@@ -1,5 +1,4 @@
 #profiletable {
-
 	background-color: rgba(60, 59, 65, 0.8);
 	padding: 15px;
 	margin-top: 185px;
@@ -10,3 +9,16 @@
 	margin-right: auto;
 }
 
+th {
+	font-size: 20px;
+}
+
+h3 {
+	padding-left: 15px;
+}
+
+#gamesbutton {
+	background-color: rgb(16, 167, 236);
+	font-size: 18px;
+	margin: 15px 15px 15px 0px;
+}
