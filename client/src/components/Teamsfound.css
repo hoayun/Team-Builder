@@ -1,0 +1,21 @@
+#teamsfoundcard {
+	margin-top: 130px;
+	margin-bottom: 130px;
+	background-color: rgba(60, 59, 65, 0.8);
+	color: white;
+	font-size: 20px;
+}
+
+.card-title,
+h2 {
+	color: rgb(197, 127, 30);
+}
+
+#teamcards,
+h2 {
+	padding: 10px;
+}
+
+#jointeambutton {
+	background-color: rgb(23, 102, 204);
+}
