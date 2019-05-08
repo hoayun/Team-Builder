@@ -3,6 +3,8 @@ import { Select, TextInput, Button } from "react-materialize";
 import "./Createteam.css";
 import { registerTeam } from "./UserFunctions";
 import jwt_decode from "jwt-decode";
+import ReactMaterialSelect from 'react-material-select'
+import 'react-material-select/lib/css/reactMaterialSelect.css'
 
 class Createteam extends Component {
 	constructor() {
@@ -10,8 +12,8 @@ class Createteam extends Component {
 		this.state = {
 			name: "",
 			memo: "",
-			game: "rocket league",
-			type: "3v3",
+			game: "",
+			type: "",
 			player: ""
 		};
 
@@ -27,8 +29,17 @@ class Createteam extends Component {
 		});
 	}
 
+
+    handleChange(event){
+		this.setState({ game: event });
+	}
+	handleChange1(event){
+		this.setState({ type: event });
+	}
+
 	onChange(event) {
 		this.setState({ [event.target.name]: event.target.value });
+	
 	}
 
 	onSubmit(event) {
@@ -37,8 +48,8 @@ class Createteam extends Component {
 		const newTeam = {
 			name: this.state.name,
 			memo: this.state.memo,
-			game: this.state.game,
-			type: this.state.type,
+			game: this.state.game.value,
+			type: this.state.type.value,
 			player: this.state.player
 		};
 		console.log(newTeam);
@@ -52,31 +63,52 @@ class Createteam extends Component {
 		return (
 			<div className="container" id="selectgame2">
 				<h3>Create a Team</h3>
-				<TextInput label="Team Name" name="name" value={this.state.name} onChange={this.onChange} />
-				<Select value="">
-					<option value="">Choose your Game</option>
-					<option value="1">Rocket League</option>
-					<option value="2" disabled>
+
+				<TextInput 
+				label="Team Name"
+				name="name"
+				value={this.state.name}
+				onChange={this.onChange} />
+				<ReactMaterialSelect
+				name="game"
+				label="Select a game"
+				onChange={this.handleChange.bind(this)}
+				>
+					<option dataValue="Rocket League">Rocket League</option>
+					<option dataValue="Overwatch" >
+
 						Overwatch
 					</option>
-					<option value="3" disabled>
+					<option dataValue="Destiny2" >
 						Destiny 2
 					</option>
-				</Select>
-				<Select
-				//value={this.state.type}
-				// onChange={(e) => this.setState({type: e.target.value})}>
-				//defaultValue={this.state.value}
+
+				</ReactMaterialSelect>
+				<ReactMaterialSelect 
+				name="type"
+				label="Select a game type"
+				onChange={this.handleChange1.bind(this)}
+				
+
 				>
 					<option value="" disabled>
 						Choose your game type
 					</option>
-					<option value="1">2v2</option>
-					<option value="2">3v3</option>
-					<option value="3">4v4</option>
-				</Select>
-				<TextInput label="Memo" name="memo" value={this.state.memo} onChange={this.onChange} />
-				<Button type="submit" id="submitbutton" name="action" onClick={this.onSubmit} waves="light">
+
+					<option dataValue="2v2">2v2</option>
+					<option dataValue="3v3">3v3</option>
+					<option dataValue="4v4">4v4</option>
+				</ReactMaterialSelect>
+				<TextInput label="Memo"
+				name="memo"
+				value={this.state.memo}
+				onChange={this.onChange} />
+				<Button type="submit" 
+				    id="submitbutton" 
+					name="action"
+					onClick={this.onSubmit}
+					waves="grey">
+
 					Submit <i className="fas fa-check" />
 				</Button>
 			</div>
