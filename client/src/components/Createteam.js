@@ -88,9 +88,7 @@ class Createteam extends Component {
 				onChange={this.handleChange1.bind(this)}
 				
 				>
-					<option value="" disabled>
-						Choose your game type
-					</option>
+					
 					<option dataValue="2v2">2v2</option>
 					<option dataValue="3v3">3v3</option>
 					<option dataValue="4v4">4v4</option>
@@ -103,7 +101,7 @@ class Createteam extends Component {
 				    id="submitbutton" 
 					name="action"
 					onClick={this.onSubmit}
-					waves="grey">
+					waves="light">
 					Submit <i className="fas fa-check" />
 				</Button>
 			</div>
