@@ -34,7 +34,7 @@ export const login = (user) => {
 
 export const registerTeam = (newTeam) => {
 	return axios
-		.post("/create", {
+		.post("/teams/createteam", {
 			
 			memo: newTeam.memo,
 			name: newTeam.name,

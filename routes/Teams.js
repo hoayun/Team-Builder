@@ -5,13 +5,13 @@ const Team = require("../models/Team")
 
 
 //making a new team
-teams.post("/game",(req, res) => {
+teams.post("/createteam",(req, res) => {
     const teamData = {
         name: req.body.name,
         game: req.body.game,
         type: req.body.type,
         memo: req.body.memo,
-        player1: req.body.player
+        player1: req.body.player1
     }
 
     Team.findOne({
@@ -26,6 +26,7 @@ teams.post("/game",(req, res) => {
             .then(function () {
                 console.log("Registered Team")
              //   res.redirect(307, "/team");
+             res.json("Team created");
                 
         })
             .catch(err => {
@@ -41,3 +42,5 @@ teams.post("/game",(req, res) => {
             res.send("error: " + err)
         })
     })
+
+    module.exports = teams

@@ -14,14 +14,14 @@ class Game extends Component {
 							</div>
 							<div className="center-align card-action">
 								<a href="/Findteam" className="waves-effect waves-light btn-large" id="findteambutton">
-									<i class="fas fa-search" /> Find Team
+									<i className="fas fa-search" /> Find Team
 								</a>
 								<a
 									href="/Createteam"
 									className="waves-effect waves-light btn-large"
 									id="maketeambutton"
 								>
-									Create Team <i class="fas fa-handshake" />
+									Create Team <i className="fas fa-handshake" />
 								</a>
 							</div>
 						</div>
