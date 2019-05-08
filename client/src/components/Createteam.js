@@ -15,22 +15,20 @@ class Createteam extends Component {
 			game: "",
 			type: "",
 			player: ""
-		
 		};
 
 		this.onChange = this.onChange.bind(this);
 		this.onSubmit = this.onSubmit.bind(this);
-		
 	}
 	componentDidMount() {
 		const token = localStorage.getItem("usertoken");
 		console.log(token);
 		const decoded = jwt_decode(token);
 		this.setState({
-			
 			player: decoded.screenname
 		});
 	}
+
 
     handleChange(event){
 		this.setState({ game: event });
@@ -38,6 +36,7 @@ class Createteam extends Component {
 	handleChange1(event){
 		this.setState({ type: event });
 	}
+
 	onChange(event) {
 		this.setState({ [event.target.name]: event.target.value });
 	
@@ -64,6 +63,7 @@ class Createteam extends Component {
 		return (
 			<div className="container" id="selectgame2">
 				<h3>Create a Team</h3>
+
 				<TextInput 
 				label="Team Name"
 				name="name"
@@ -76,21 +76,25 @@ class Createteam extends Component {
 				>
 					<option dataValue="Rocket League">Rocket League</option>
 					<option dataValue="Overwatch" >
+
 						Overwatch
 					</option>
 					<option dataValue="Destiny2" >
 						Destiny 2
 					</option>
+
 				</ReactMaterialSelect>
 				<ReactMaterialSelect 
 				name="type"
 				label="Select a game type"
 				onChange={this.handleChange1.bind(this)}
 				
+
 				>
 					<option value="" disabled>
 						Choose your game type
 					</option>
+
 					<option dataValue="2v2">2v2</option>
 					<option dataValue="3v3">3v3</option>
 					<option dataValue="4v4">4v4</option>
@@ -104,6 +108,7 @@ class Createteam extends Component {
 					name="action"
 					onClick={this.onSubmit}
 					waves="grey">
+
 					Submit <i className="fas fa-check" />
 				</Button>
 			</div>
