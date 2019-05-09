@@ -34,7 +34,7 @@ class Findteam extends Component {
 	
 			findTeam(newTeam).then((res) => {
 				//this.props.history.push("/Game");
-				console.log(res);
+				console.log(res.data);
 			});
 		}
 		componentDidMount() {
@@ -90,11 +90,11 @@ class Findteam extends Component {
 
 				<Button type="submit" 
 				id="submitbutton" 
-				waves="grey"
+				waves="light"
 				name="action"
 				onClick={this.onSubmit}
 					>
-					Submit <i class="fas fa-check" />
+					Submit <i className="fas fa-check" />
 				</Button>
 			</div>
 		);

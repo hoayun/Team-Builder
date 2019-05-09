@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link, withRouter } from "react-router-dom";
+import {  withRouter } from "react-router-dom";
 import { Navbar, NavItem } from "react-materialize";
 import "./Navbar.css";
 
@@ -11,20 +11,20 @@ class Landing extends Component {
 	}
 
 	render() {
-		const userLink = (
-			<ul className="nav-wrapper">
-				<li className="NavItem">
-					<Link to="/profile" className="nav-link">
-						User
-					</Link>
-				</li>
-				<li className="NavItem">
-					<a href="/" onClick={this.logOut.bind(this)} className="nav-link">
-						Logout
-					</a>
-				</li>
-			</ul>
-		);
+		// const userLink = (
+		// 	<ul className="nav-wrapper">
+		// 		<li className="NavItem">
+		// 			<Link to="/profile" className="nav-link">
+		// 				User
+		// 			</Link>
+		// 		</li>
+		// 		<li className="NavItem">
+		// 			<a href="/" onClick={this.logOut.bind(this)} className="nav-link">
+		// 				Logout
+		// 			</a>
+		// 		</li>
+		// 	</ul>
+		// );
 
 		return (
 			<Navbar

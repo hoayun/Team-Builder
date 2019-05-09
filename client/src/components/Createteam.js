@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Select, TextInput, Button } from "react-materialize";
+import { TextInput, Button } from "react-materialize";
 import "./Createteam.css";
 import { registerTeam } from "./UserFunctions";
 import jwt_decode from "jwt-decode";
