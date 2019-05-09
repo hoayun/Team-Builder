@@ -41,7 +41,7 @@ class Profile extends Component {
 					</tbody>
 				</Table>
 				<a href="/Game" className="waves-effect waves-dark btn" id="gamesbutton">
-					<i class="fas fa-users" /> Go to Find/Create Team
+					<i className="fas fa-users" /> Go to Find/Create Team
 				</a>
 			</div>
 		);

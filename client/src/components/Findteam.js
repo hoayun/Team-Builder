@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-import { Button } from "react-materialize";
+import { Button, Card } from "react-materialize";
 import "./Findteam.css";
 import jwt_decode from "jwt-decode";
 import { findTeam } from "./UserFunctions";
 import ReactMaterialSelect from 'react-material-select'
 import 'react-material-select/lib/css/reactMaterialSelect.css'
+import Team from "./Team";
 class Findteam extends Component {
 	
 		constructor() {
@@ -13,7 +14,8 @@ class Findteam extends Component {
 			
 				game: "",
 				type: "",
-				player: ""
+				player: "",
+				teams: []
 			
 			};
 	
@@ -33,9 +35,11 @@ class Findteam extends Component {
 			console.log(newTeam);
 	
 			findTeam(newTeam).then((res) => {
-				//this.props.history.push("/Game");
-				console.log(res.data);
+				this.setState({
+					teams: res.data
 			});
+		//	console.log(state.teams)
+		 })
 		}
 		componentDidMount() {
 			const token = localStorage.getItem("usertoken");
@@ -96,6 +100,29 @@ class Findteam extends Component {
 					>
 					Submit <i className="fas fa-check" />
 				</Button>
+				<Card title="Results">
+             
+                  {this.state.teams.map(team => (
+                    <Team
+                      key={team.id}
+                      name={team.name}
+                      game={team.game}
+                      type={team.type}
+                      memo={team.memo}
+                      Button={() => (
+                        <button
+                           //onClick={() => this.handleteamSave(team.id)}
+                          className="btn btn-primary ml-2"
+                        >
+                          Join
+                        </button>
+                      )}
+                    />
+					
+                  ))}
+                
+			  
+			   </Card>
 			</div>
 		);
 	}
