@@ -60,6 +60,7 @@ class Findteam extends Component {
 				<h3>Find a Team</h3>
 				<ReactMaterialSelect name="game" label="Select a game" onChange={this.handleChange.bind(this)}>
 					<option dataValue="Rocket League">Rocket League</option>
+
 					<option dataValue="Overwatch">Overwatch</option>
 					<option dataValue="Destiny2">Destiny 2</option>
 				</ReactMaterialSelect>
@@ -80,12 +81,13 @@ class Findteam extends Component {
 							game={team.game}
 							type={team.type}
 							memo={team.memo}
+							players={team.player1}
 							Button={() => (
-								<button className="btn btn-primary ml-2">
-									{" "}
-									{() => this.handleteamSave(team.id)}
-									Join
-								</button>
+                                <button className="btn btn-primary ml-2">
+                                    {" "}
+                                    {() => this.handleteamSave(team.id)}
+                                    Join
+                                </button>
 							)}
 						/>
 					))}

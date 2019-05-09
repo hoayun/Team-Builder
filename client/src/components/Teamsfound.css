@@ -19,3 +19,8 @@ h2 {
 #jointeambutton {
 	background-color: rgb(23, 102, 204);
 }
+
+#joinbutton {
+	background-color: rgb(96, 238, 13);
+	color: black;
+}
