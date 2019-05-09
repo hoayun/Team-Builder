@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {  withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import { Navbar, NavItem } from "react-materialize";
 import "./Navbar.css";
 
@@ -39,8 +39,13 @@ class Landing extends Component {
 				<NavItem href="/Login" id="loginlink">
 					<i className="fas fa-sign-in-alt" /> Login
 				</NavItem>
+
 				<NavItem href="/Register" id="registerlink">
 					Register <i className="fas fa-user-plus" />
+				</NavItem>
+
+				<NavItem href="/" id="logoutlink">
+					<i className="fas fa-sign-out-alt" /> Logout
 				</NavItem>
 			</Navbar>
 		);

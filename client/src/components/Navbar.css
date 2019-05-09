@@ -16,6 +16,14 @@ nav {
 
 #registerlink {
 	font-size: 18px;
-	color: rgb(42, 79, 240);
+	color: rgb(70, 88, 172);
 	margin-left: 5px;
+	margin-right: 5px;
+}
+
+#logoutlink {
+	font-size: 18px;
+	color: rgb(212, 31, 31);
+	margin-left: 5px;
+	margin-right: 5px;
 }
