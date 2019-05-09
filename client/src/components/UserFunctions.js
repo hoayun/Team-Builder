@@ -60,9 +60,5 @@ export const findTeam = (newTeam) => {
 			
 		
 		})
-		.then((response) => {
-			console.log("looking for teams");
-			console.log(response)
-
-		});
+		
 };
