@@ -68,17 +68,34 @@ class Createteam extends Component {
 					<option dataValue="Overwatch">Overwatch</option>
 					<option dataValue="Destiny2">Destiny 2</option>
 				</ReactMaterialSelect>
-				<ReactMaterialSelect name="type" label="Select a game type" onChange={this.handleChange1.bind(this)}>
-					<option value="" disabled>
-						Choose your game type
-					</option>
+
+				<ReactMaterialSelect 
+				name="type"
+				label="Select a game type"
+				onChange={this.handleChange1.bind(this)}
+				
+
+				>
+
+					
+
 
 					<option dataValue="2v2">2v2</option>
 					<option dataValue="3v3">3v3</option>
 					<option dataValue="4v4">4v4</option>
 				</ReactMaterialSelect>
-				<TextInput label="Memo" name="memo" value={this.state.memo} onChange={this.onChange} />
-				<Button type="submit" id="submitbutton" name="action" onClick={this.onSubmit} waves="light">
+
+				<TextInput label="Memo"
+				name="memo"
+				value={this.state.memo}
+				onChange={this.onChange} />
+				<Button type="submit" 
+				    id="submitbutton" 
+					name="action"
+					onClick={this.onSubmit}
+
+					waves="light">
+
 					Submit <i className="fas fa-check" />
 				</Button>
 			</div>

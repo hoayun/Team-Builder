@@ -49,3 +49,20 @@ export const registerTeam = (newTeam) => {
 
 		});
 };
+
+export const findTeam = (newTeam) => {
+	return axios
+		.post("/teams/findteam", {
+			
+			
+			game: newTeam.game,
+			type: newTeam.type,
+			
+		
+		})
+		.then((response) => {
+			console.log("looking for teams");
+			console.log(response)
+
+		});
+};
