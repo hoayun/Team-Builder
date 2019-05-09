@@ -1,13 +1,13 @@
 #teamsfoundcard {
-	margin-top: 130px;
-	margin-bottom: 130px;
+	margin-top: 70px;
+	margin-bottom: 70px;
 	background-color: rgba(60, 59, 65, 0.8);
-	color: white;
+	color: silver;
 	font-size: 20px;
 }
 
 .card-title,
-h2 {
+h3 {
 	color: rgb(197, 127, 30);
 }
 
