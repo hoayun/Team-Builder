@@ -6,7 +6,7 @@ const sequelize = new Sequelize("lfg", "root", "root", {
 	port: 8889
 });
 sequelize.sync({
-    force: false
+    force: true
 });
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
