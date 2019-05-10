@@ -7,7 +7,7 @@ const app = express();
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:false}))
 
-var Users = require("./routes/Users")
+var Users = require("./routes/users")
 var Teams = require("./routes/Teams")
 app.use("/users", Users)
 app.use("/teams", Teams)
