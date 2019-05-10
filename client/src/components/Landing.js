@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Landing.css";
+import teambuilderlogo2 from "./teambuilderlogo2.png";
 
 class Landing extends Component {
 	render() {
@@ -23,9 +24,9 @@ class Landing extends Component {
 								</a>
 							</div>
 						</div>
-						{/* <div className="card-image">
-							<img src="teambuilderlogo2.png" />
-						</div> */}
+						<div className="Image">
+							<img src={teambuilderlogo2} alt="teambuilderlogo" />
+						</div>
 					</div>
 				</div>
 			</div>
