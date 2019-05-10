@@ -3,7 +3,7 @@ const db = {};
 const sequelize = new Sequelize("lfg", "root", "root", {
 	host: "localhost",
 	dialect: "mysql",
-	port: 8889
+	port:  PORT = process.env.PORT || 3306
 });
 sequelize.sync({
     force: true
