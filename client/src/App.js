@@ -4,12 +4,13 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Landing from "./components/Landing";
 import Register from "./components/Register";
-import Login from "./components/login";
+import Login from "./components/Login";
 import Profile from "./components/Profile";
 import Game from "./components/Game";
 import Createteam from "./components/Createteam";
 import Findteam from "./components/Findteam";
-import Teamsfound from "./components/Teamsfound";
+import Team from "./components/Team";
+import Logout from "./components/Logout";
 import "./App.css";
 
 class App extends Component {
@@ -26,7 +27,8 @@ class App extends Component {
 						<Route exact path="/game" component={Game} />
 						<Route exact path="/createteam" component={Createteam} />
 						<Route exact path="/findteam" component={Findteam} />
-						<Route exact path="/teamsfound" component={Teamsfound} />
+						<Route exact path="/team" component={Team} />
+						<Route exact path="/logout" component={Logout} />
 					</div>
 				</div>
 			</Router>

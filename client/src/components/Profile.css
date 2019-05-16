@@ -1,16 +1,17 @@
-#profiletable {
+#profiletable,
+#currentteamtable {
 	background-color: rgba(60, 59, 65, 0.8);
 	padding: 15px;
 	margin-top: 185px;
 	margin-bottom: 190px;
 	color: rgb(197, 127, 30);
-	font-size: 17px;
+	font-size: 22px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 th {
-	font-size: 20px;
+	font-size: 22px;
 }
 
 h3 {
