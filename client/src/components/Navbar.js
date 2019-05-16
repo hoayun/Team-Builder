@@ -45,7 +45,7 @@ class Landing extends Component {
 					Register <i className="fas fa-user-plus" />
 				</NavItem>
 
-				<NavItem href="/" id="logoutlink">
+				<NavItem href="/Logout" id="logoutlink">
 					<i className="fas fa-sign-out-alt" /> Logout
 				</NavItem>
 			</Navbar>
