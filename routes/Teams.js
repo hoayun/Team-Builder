@@ -61,4 +61,23 @@ teams.post("/createteam",(req, res) => {
         });
     })
 
+
+    teams.post("/findactiveteam",(req, res) => {
+        Team.findAll({
+            where: {
+              player1: req.body.player1
+             
+            }
+          })
+        
+        .then(team =>{
+            if (team) {
+                res.json(team);
+            }
+            else {
+                res.json({error: "No teams found"})
+            }
+        });
+    })
+
     module.exports = teams

@@ -1,15 +1,17 @@
 import React, { Component } from "react";
 import jwt_decode from "jwt-decode";
-import { Table, Card, Team } from "react-materialize";
-
+import { Table, Card } from "react-materialize";
+import { findActiveTeam } from "./UserFunctions";
 import "./Profile.css";
+import Active from "./activeTeam";
 
 class Profile extends Component {
 	constructor() {
 		super();
 		this.state = {
 			email: "",
-			screenname: ""
+			screenname: "",
+			teams: []
 		};
 	}
 
@@ -21,7 +23,19 @@ class Profile extends Component {
 			email: decoded.email,
 			screenname: decoded.screenname
 		});
-	}
+		const activeTeams = {
+			player1: decoded.screenname,
+		
+		};
+		console.log(activeTeams);
+
+		findActiveTeam(activeTeams).then((res) => {
+			this.setState({
+				teams: res.data
+			});
+			//	console.log(state.teams)
+		});
+		}
 
 	render() {
 		return (
@@ -58,9 +72,9 @@ class Profile extends Component {
 				</div>
 
 				<div className="col 6">
-					<Card title="Current Team" id="currentteamtable">
+					<Card title="Active Teams" id="currentteamtable">
 						{this.state.teams.map((team) => (
-							<Team
+							<Active
 								key={team.id}
 								name={team.name}
 								game={team.game}

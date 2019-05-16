@@ -62,3 +62,15 @@ export const findTeam = (newTeam) => {
 		})
 		
 };
+
+export const findActiveTeam = (activeTeams) => {
+	return axios
+		.post("/teams/findactiveteam", {
+			
+			
+			player1: activeTeams.player1
+			
+		
+		})
+		
+};
