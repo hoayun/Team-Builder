@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Landing from "./components/Landing";
 import Register from "./components/Register";
-import Login from "./components/Login";
+import Login from "./components/login";
 import Profile from "./components/Profile";
 import Game from "./components/Game";
 import Createteam from "./components/Createteam";

@@ -11,6 +11,7 @@ class Landing extends Component {
 	}
 
 	render() {
+		
 		// const userLink = (
 		// 	<ul className="nav-wrapper">
 		// 		<li className="NavItem">
