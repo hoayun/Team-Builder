@@ -1,5 +1,5 @@
 import React from "react";
-import "./Teamsfound.css";
+import "./Team.css";
 import { Card } from "react-materialize";
 
 function Team({ name, game, type, memo, players }) {
@@ -10,14 +10,11 @@ function Team({ name, game, type, memo, players }) {
 			{type && <h4 className="font-italic">{type}</h4>}
 			{memo && <h4 className="font-italic">{memo}</h4>}
 			{players && <h4 className="font-italic">Current Players: {players}</h4>}
-			{<button className="btn waves-effect waves-light"
-                                id="joinbutton"
-                                type="submit"
-                                name="action"
-                                
-                            >
-                                Join <i className="fas fa-user-plus" />
-                            </button>}
+			{
+				<button className="btn waves-effect waves-light" id="joinbutton" type="submit" name="action">
+					Join <i className="fas fa-user-plus" />
+				</button>
+			}
 		</Card>
 	);
 }
