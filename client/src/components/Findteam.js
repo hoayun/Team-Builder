@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Button, Card } from "react-materialize";
 import "./Findteam.css";
 import jwt_decode from "jwt-decode";
-import { findTeam } from "./UserFunctions";
+import { findTeam, updateTeam2 } from "./UserFunctions";
 import ReactMaterialSelect from "react-material-select";
 import "react-material-select/lib/css/reactMaterialSelect.css";
 import Team from "./Team";
@@ -54,6 +54,18 @@ class Findteam extends Component {
 		this.setState({ [event.target.name]: event.target.value });
 	}
 
+handleTeamSave = id => {
+	const team = this.state.teams.find(team => team.id === id);
+	const newTeam2 = {
+		id:team.id,
+		player2:this.state.player
+	}
+	console.log(newTeam2);
+	updateTeam2(newTeam2).then((res) => {
+		console.log(res);
+	})
+
+}
 	render() {
 		return (
 			<div className="container" id="selectgame">
@@ -81,12 +93,12 @@ class Findteam extends Component {
 							game={team.game}
 							type={team.type}
 							memo={team.memo}
-							players={team.player1}
+							players={team.player1+","+team.player2+","+team.player3}
 							Button={() => (
-                                <button className="btn btn-primary ml-2">
-                                    {" "}
-                                    {() => this.handleteamSave(team.id)}
-                                    Join
+                                <button className="btn btn-primary ml-2" id="joinbutton"
+                                   
+                                  onClick={() => this.handleTeamSave(team.id)}>
+                                    Join <i className="fas fa-user-plus" />
                                 </button>
 							)}
 						/>
