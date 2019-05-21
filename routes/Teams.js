@@ -65,7 +65,8 @@ teams.post("/createteam",(req, res) => {
     teams.post("/findactiveteam",(req, res) => {
         Team.findAll({
             where: {
-              player1: req.body.player1
+           player1: req.body.player1
+            
              
             }
           })
@@ -79,5 +80,60 @@ teams.post("/createteam",(req, res) => {
             }
         });
     })
+
+
+    teams.post("/findteam2",(req, res) => {
+        Team.findAll({
+            where: {
+             id:req.body.id
+            }
+          })
+        
+        .then(team =>{
+            if (team) {
+                res.json(team);
+            }
+            else {
+                res.json({error: "No teams found"})
+            }
+        });
+    })
+
+    teams.post("/updateteam2",(req, res) => {
+        Team.findAll({
+            where: {
+             id:req.body.id
+            }
+          })
+        
+        .then(team =>{
+            if (team.player2 === null) {
+                Team.update({
+                    player2: req.body.player2
+                  }, {
+                      where: {
+                        id: req.body.id
+                       }
+                    }).then(team =>{
+                       
+                            res.json(team);
+                        })
+                        
+            }
+            else {
+                Team.update({
+                    player3: req.body.player2
+                  }, {
+                      where: {
+                        id: req.body.id
+                       }
+                    }).then(team =>{
+                       
+                        res.json(team);
+                    })
+            }
+        });
+    })
+    
 
     module.exports = teams
